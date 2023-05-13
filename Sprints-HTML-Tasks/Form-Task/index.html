@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>test</title>
+    <meta charset="utf-8" />
+    <meta name="description" content="TEST" />
+  </head>
+
+  <body bgcolor="lightgrey">
+    <form action="/" method="post">
+      <fieldset style="background-color: goldenrod">
+        <legend style="background-color: gold; line-height: 2">[ Personal Data ]<br /></legend>
+
+        <fieldset>
+          <legend style="background-color: white; line-height: 2;">[ Your Name ]<br /></legend>
+          <table>
+            <tr>
+              <td><label for="fname">First Name :</label></td>
+              <td><input type="text" id="fname" /></td>
+            </tr>
+            <tr>
+              <td><label for="lname">Last Name :</label></td>
+              <td><input type="text" id="lname" /></td>
+            </tr>
+          </table>
+        </fieldset>
+        <br>
+        <table>
+          <tr>
+            <td><label for="phone">Phone Number :</label></td>
+            <td><input type="tel" id="phone" /></td>
+          </tr>
+          <tr>
+            <td><label for="email">Your Email :</label></td>
+            <td><input type="email" id="email" /></td>
+          </tr>
+          <tr>
+            <td><label for="password">Type Password :</label></td>
+            <td><input type="password" id="password" /></td>
+          </tr>
+          <tr>
+            <td><label for="re-password">Retype Password :</label></td>
+            <td><input type="password" id="re-password" /></td>
+          </tr>
+        </table>
+        <br>
+        <input type="radio" id="male" value="male" >
+        <label for="male">Male</label>
+        <br>
+        <input type="radio" id="female" value="female" >
+        <label for="female">Female</label>
+        <br>
+        <br>
+        <input type="checkbox" id="student" value="student" >
+        <label for="student">Student</label>
+        <br>
+        <input type="checkbox" id="grad" value="grad" >
+        <label for="grad">Graduated</label>
+        <br>
+        <br>
+        <label for="university">University : </label>
+        <select id="university">
+          <option value="auc">ASU</option>
+          <option value="auc">CU</option>
+          <option value="auc">AUC</option>
+        </select>
+        <br>
+        <br>
+        <button type="submit">
+          -> Submit
+        </button>
+        <br>
+
+      </fieldset>
+  </body>
+</html>
