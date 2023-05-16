@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: green;
+  color: white;
+  display: flex;
+  align-items: center;
+  line-height: 1.5%;
+  padding: 0 2%;
+}
+nav a {
+  color: yellow;
+  text-decoration: none;
+}
+nav a:hover {
+  color: yellowgreen;
+}
+.drop-down,
+.info,
+nav li {
+  padding: 1.2rem;
+}
+
+header button {
+  color: yellowgreen;
+  background: none;
+  border: none;
+}
+header button:hover {
+  cursor: pointer;
+}
+
+.drop-down {
+  color: yellow;
+  background-color: yellowgreen;
+  width: 17%;
+  text-align: left;
+  display: flex;
+  align-items: center;
+}
+.drop-down span {
+  margin-left: 1rem;
+  margin-right: auto;
+}
+
+header ul {
+  list-style: none;
+  display: flex;
+}
+
+nav {
+  margin-left: 1rem;
+  margin-right: auto;
+}
+
+.count {
+  border-radius: 50%;
+  padding: 0 5px;
+  border: 1px solid;
+}
