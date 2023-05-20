@@ -1,0 +1,263 @@
+:root {
+  --main-font-color: #888;
+  --header-background-color: #f5f5f5;
+  --main-theme-color: #ffd334;
+  --main-dark-color: #3d464d;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* styling header */
+/* SMALL NAV */
+.small-nav {
+  background-color: var(--header-background-color);
+}
+.small-nav-container {
+  margin: 0 auto;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+}
+/* links on the left */
+.small-nav .links {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.3rem;
+  margin: 0.3rem 0;
+}
+.small-nav .links a {
+  text-decoration: none;
+  text-transform: capitalize;
+  color: var(--main-font-color);
+}
+.small-nav .links a:hover {
+  background-color: var(--main-theme-color);
+}
+/* menus on the right */
+.small-nav .menus {
+  color: var(--main-font-color);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+}
+.small-nav .menus .menu-name {
+  text-transform: capitalize;
+  position: relative;
+  z-index: 2000;
+  background-color: #fff;
+}
+.small-nav .menus .menu-name:hover  {
+    background-color: var(--main-theme-color);
+    cursor: pointer;
+}
+
+.small-nav .menus .menu-name li {
+  list-style: none;
+  display: block;
+  text-decoration: none;
+  text-transform: capitalize;
+  background-color: var(--header-background-color);
+}
+.small-nav .menus .menu-name li:hover {
+    background-color: var(--main-theme-color);
+}
+.small-nav .menus .menu-name:hover .sub-menu {
+  display: block;
+  line-height: 2rem;
+}
+.small-nav .menus .menu-name .sub-menu {
+  display: none;
+  position: absolute;
+  width: 100%;
+}
+
+/* STYLING LOGO SECTION */
+.logo-section {
+  background-color: #fff;
+  width: 100%;
+}
+.logo-section * {
+  text-align: center;
+}
+.logo-section .logo-section-container {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+/* styling logo */
+.logo-section-container {
+  padding: 1rem 0;
+}
+.logo-section .logo-section-container .logo {
+  flex-grow: 1;
+}
+.logo-section .logo-section-container .logo div {
+  display: inline-block;
+  width: 50%;
+  height: 100%;
+  box-sizing: border-box;
+  font-size: 2rem;
+  font-weight: 1000;
+  text-transform: uppercase;
+}
+.logo-section .logo-section-container .logo div:first-of-type {
+  color: var(--main-theme-color);
+  background-color: var(--main-font-color);
+}
+.logo-section .logo-section-container .logo div:last-of-type {
+  background-color: var(--main-theme-color);
+  color: var(--main-font-color);
+}
+/* styling search bar */
+.logo-section .logo-section-container .search-bar {
+  flex-grow: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logo-section .logo-section-container .search-bar input {
+  text-transform: capitalize;
+  text-align: left;
+  padding: 0.2rem;
+  width: 50%;
+  color: var(--main-dark-color);
+  border: 1px solid var(--main-dark-color);
+}
+.logo-section .logo-section-container .search-bar i {
+  border: 1px solid var(--main-font-color);
+  padding: 0.2rem;
+  color: var(--main-theme-color);
+  border: 1px solid var(--main-font-color);
+}
+.logo-section .logo-section-container .search-bar i:hover {
+  cursor: pointer;
+}
+
+/* styling info */
+.logo-section .logo-section-container .info {
+  flex-grow: 1;
+}
+.logo-section .logo-section-container .info p {
+  color: var(--main-dark-color);
+}
+.logo-section .logo-section-container .info span {
+  color: var(--main-font-color);
+}
+
+/* STYLING MAIN NAV SECTION */
+.main-nav * {
+  /* border: 1px solid black; */
+  text-align: center;
+}
+.main-nav {
+  background-color: var(--main-font-color);
+}
+.main-nav .main-nav-container {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  height: 4rem;
+}
+/* styling categories */
+.main-nav .main-nav-container .catgs {
+  flex-grow: 4;
+  text-transform: capitalize;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--main-font-color);
+  background-color: var(--main-theme-color );
+  font-size: 1.2rem;
+}
+.main-nav .main-nav-container .catgs p {
+  flex-grow: 2;
+  text-align: left;
+  padding-left:1rem;
+}
+.main-nav .main-nav-container .catgs i:first-of-type {
+  display: inline-block;
+  margin-left: 1rem;
+}
+.main-nav .main-nav-container .catgs i:last-of-type {
+  display: inline-block;
+  margin-right: 1rem;
+}
+.main-nav .main-nav-container .catgs i:hover {
+    cursor: pointer;
+    color: var(--header-background-color);
+}
+
+
+/* stying links */
+.main-nav .main-nav-container .links {
+  flex-grow: 15;
+  display:flex;
+  align-items: center;
+  padding-left: 1rem;
+}
+.main-nav .main-nav-container .links .menu{
+    display: flex;
+    gap: 1rem;
+    z-index: 2000;
+    width: 50%;
+}
+.main-nav .main-nav-container .links .menu .menu-name{
+    text-transform: capitalize;
+    position: relative;
+    color: var(--header-background-color);
+    line-height: 2rem;
+    flex-grow: 2;
+
+}
+.main-nav .main-nav-container .links .menu .menu-name:hover{
+color: var(--main-theme-color);
+cursor: pointer;
+}
+.main-nav .main-nav-container .links .menu .menu-name li{
+    list-style: none;
+    display: block;
+    color: white;
+    background-color: var(--main-font-color);
+    line-height: 2rem;
+
+}
+.main-nav .main-nav-container .links .menu .menu-name li:hover{
+    color:var(--main-theme-color);
+}
+.main-nav .main-nav-container .links .menu .menu-name .sub-menu{
+    display: none;
+    position: absolute;
+}
+.main-nav .main-nav-container .links .menu .menu-name:hover .sub-menu{
+    display: block;
+    width: 100%;
+}
+
+
+/* stying cart-info */
+.main-nav .main-nav-container .cart-info {
+  flex-grow: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.main-nav .main-nav-container .cart-info i{
+    color: var(--main-theme-color);
+    margin: .3rem;
+}
+.main-nav .main-nav-container .cart-info p{
+    border: 1px solid var(--header-background-color);
+    color: var(--header-background-color);
+    border-radius:100% ;
+    margin-right: 1rem;
+    width: 1rem;
+}
+
