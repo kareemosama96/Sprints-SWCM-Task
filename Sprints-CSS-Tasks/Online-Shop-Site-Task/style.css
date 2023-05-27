@@ -8,6 +8,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  transition: transform .5s;
+  min-width: 0px;
 }
 
 /* styling header */
