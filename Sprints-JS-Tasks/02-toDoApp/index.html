@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do</title>
+    <link href="./style.css" rel="stylesheet" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Archivo&display=swap');
+      </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- heading -->
+      <h1>to do list</h1>
+
+      <!-- form to add todos -->
+      <div class="form">
+        <input id="todo" type="text" placeholder="to do" />
+        <input id="priority" type="number" placeholder="priority [ 1,2,3 ] only" min="1" max="3" />
+        <button id="add-btn">add to do</button>
+      </div>
+
+      <!-- table of todos-->
+      <table id='table' class="container">
+        <thead>
+          <tr>
+            <th>To Do</th>
+            <th>Priority</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="tbody">
+            <tr id="">
+                
+            </tr>
+        </tbody>
+      </table>
+    </div>
+    <script src="./javascript.js"></script>
+  </body>
+</html>
