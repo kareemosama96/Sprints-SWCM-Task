@@ -1,27 +1,30 @@
+'use strict'
 import fetch from "node-fetch";
 import http from "http";
 import url from "url";
 import joi from "joi";
 
 const server = http.createServer((req, res) => {
-  const { query, pathname } = url.parse(req.url,true);
+  const pathname = url.parse(req.url).pathname;
+  const query = url.parse(req.url).query;
 
-  if ( req.method === "GET" && pathname === "/products" ) {
+  if (req.method === "GET" && pathname === "/products") {
     const products = async () => {
       try {
         const [productsResponse, exchangeRateResponse] = await Promise.all([
-          fetch("https://api.escuelajs.co/api/v1/products?offset=1&limit=3"),
-          fetch(`https://api.exchangerate.host/convert?from=USD&to=${query.CUR}`),
+          fetch("https://api.escuelajs.co/api/v1/products?offset=1&limit=4"),
+          fetch(
+            `https://api.exchangerate.host/convert?from=USD&to=${query}`
+          ),
         ]);
-
         if (!productsResponse.ok || !exchangeRateResponse.ok) {
           throw new Error("Unable to fetch data from API");
         }
 
         const productsData = await productsResponse.json();
         const exchangeRateData = await exchangeRateResponse.json();
-
         const conversionRate = exchangeRateData.result;
+        console.log(exchangeRateData);
 
         const transformedProducts = productsData.reduce((acc, product) => {
           if (!acc[product.category?.id]) {
@@ -93,5 +96,5 @@ const server = http.createServer((req, res) => {
 //   console.log("Converting from USD ...");
 // });
 server.listen(8080, () => {
-  console.log("SERVER is running on http://localhost:8080");
+  console.log("\nSERVER is running on http://localhost:8080");
 });
