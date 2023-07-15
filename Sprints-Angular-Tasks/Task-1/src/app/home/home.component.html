@@ -1,0 +1,11 @@
+<section>
+  <app-add-musician
+    (musicianAddedEvent)="addNewMusician($event)"
+  ></app-add-musician>
+  <ul>
+    <app-list-musicians
+      *ngFor="let m of musicians"
+      [mucision]="m"
+    ></app-list-musicians>
+  </ul>
+</section>

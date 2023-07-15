@@ -1,0 +1,10 @@
+<section>
+    <img src="{{ musician?.photoUrl }}" alt="{{ musician?.name }}">
+    <h2>Name: {{ musician?.name }}</h2>
+    <p>Country: {{musician?.country}}</p>
+    <ul>
+        <li *ngFor="let song of musician?.Songs">
+            {{ song }}
+        </li>
+    </ul>
+</section>
